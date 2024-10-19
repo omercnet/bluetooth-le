@@ -19,5 +19,15 @@
   <uses-feature
     android:name="android.hardware.bluetooth_le"
     android:required="false" />
+
+  <application>
+    <receiver android:name="com.capacitorjs.community.plugins.bluetoothle.BleScanReceiver"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="com.capacitorjs.community.plugins.bluetoothle.ACTION_FOUND" />
+      </intent-filter>
+    </receiver>
+  </application>
+
 </manifest>
   
