@@ -136,10 +136,9 @@ class DeviceScanner(
                 savedCallback = null
             }
         } else {
-            stopScanning()
             savedCallback?.invoke(
                 ScanResponse(
-                    false, "Already scanning. Stopping now.", null
+                    true, "Already scanning, not doing anything.", null
                 )
             )
             savedCallback = null
